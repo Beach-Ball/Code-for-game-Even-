@@ -495,7 +495,7 @@ public class InputSys : MonoBehaviour
         }
     }
 
-    // Lights up chimes based on amount of charges left
+    // shows amount of charges left
 
     public void UpdateCrystalCountUI()
     {
@@ -503,109 +503,6 @@ public class InputSys : MonoBehaviour
         {
             txtCrystalCount.SetText("Crystals : " + crystalCount);
         }
-
-        if (material1 && material2 && material3 && material4 && material5 && material6 != null)
-        {
-            if (crystalCount == 6)
-            {
-                material1.SetFloat("_Intensity", 1);
-                material2.SetFloat("_Intensity", 1);
-                material3.SetFloat("_Intensity", 1);
-                material4.SetFloat("_Intensity", 1);
-                material5.SetFloat("_Intensity", 1);
-                material6.SetFloat("_Intensity", 1);
-            }
-
-            else if (crystalCount == 5)
-            {
-                material1.SetFloat("_Intensity", 1);
-                material2.SetFloat("_Intensity", 1);
-                material3.SetFloat("_Intensity", 1);
-                material4.SetFloat("_Intensity", 1);
-                material5.SetFloat("_Intensity", 1);
-                material6.SetFloat("_Intensity", 0);
-            }
-
-            else if (crystalCount == 4)
-            {
-                material1.SetFloat("_Intensity", 1);
-                material2.SetFloat("_Intensity", 1);
-                material3.SetFloat("_Intensity", 1);
-                material4.SetFloat("_Intensity", 1);
-                material5.SetFloat("_Intensity", 0);
-                material6.SetFloat("_Intensity", 0);
-            }
-
-            else if (crystalCount == 3)
-            {
-                material1.SetFloat("_Intensity", 1);
-                material2.SetFloat("_Intensity", 1);
-                material3.SetFloat("_Intensity", 1);
-                material4.SetFloat("_Intensity", 0);
-                material5.SetFloat("_Intensity", 0);
-                material6.SetFloat("_Intensity", 0);
-            }
-
-            else if (crystalCount == 2)
-            {
-                material1.SetFloat("_Intensity", 1);
-                material2.SetFloat("_Intensity", 1);
-                material3.SetFloat("_Intensity", 0);
-                material4.SetFloat("_Intensity", 0);
-                material5.SetFloat("_Intensity", 0);
-                material6.SetFloat("_Intensity", 0);
-            }
-
-            else if (crystalCount == 1)
-            {
-                material1.SetFloat("_Intensity", 1);
-                material2.SetFloat("_Intensity", 0);
-                material3.SetFloat("_Intensity", 0);
-                material4.SetFloat("_Intensity", 0);
-                material5.SetFloat("_Intensity", 0);
-                material6.SetFloat("_Intensity", 0);
-            }
-
-            else if (crystalCount == 0)
-            {
-                material1.SetFloat("_Intensity", 0);
-                material2.SetFloat("_Intensity", 0);
-                material3.SetFloat("_Intensity", 0);
-                material4.SetFloat("_Intensity", 0);
-                material5.SetFloat("_Intensity", 0);
-                material6.SetFloat("_Intensity", 0);
-            }
-            else
-            {
-                material1.SetFloat("_Intensity", 1);
-                material2.SetFloat("_Intensity", 1);
-                material3.SetFloat("_Intensity", 1);
-                material4.SetFloat("_Intensity", 1);
-                material5.SetFloat("_Intensity", 1);
-                material6.SetFloat("_Intensity", 1);
-            }
-            //Debug.Log(Variables.Object(rb.gameObject).Get("Swimming").Equals(true));
-            if (Variables.Object(rb.gameObject).Get("Swimming").Equals(true))
-            {
-                material1.SetFloat("_Ocean_Desert", 0);
-                material2.SetFloat("_Ocean_Desert", 0);
-                material3.SetFloat("_Ocean_Desert", 0);
-                material4.SetFloat("_Ocean_Desert", 0);
-                material5.SetFloat("_Ocean_Desert", 0);
-                material6.SetFloat("_Ocean_Desert", 0);
-            }
-            
-            else
-            {
-                material1.SetFloat("_Ocean_Desert", 1);
-                material2.SetFloat("_Ocean_Desert", 1);
-                material3.SetFloat("_Ocean_Desert", 1);
-                material4.SetFloat("_Ocean_Desert", 1);
-                material5.SetFloat("_Ocean_Desert", 1);
-                material6.SetFloat("_Ocean_Desert", 1);
-            }
-        }
-
     }
 
     public void useOneCrystal()
